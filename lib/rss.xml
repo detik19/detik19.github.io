@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kronik]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://kronik.tedy.saputro.dev/</link><image><url>https://kronik.tedy.saputro.dev/lib/media/favicon.png</url><title>Kronik</title><link>https://kronik.tedy.saputro.dev/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 08 Apr 2024 15:49:58 GMT</lastBuildDate><atom:link href="https://kronik.tedy.saputro.dev/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 08 Apr 2024 15:49:58 GMT</pubDate><copyright><![CDATA[Tedy Tri Saputro]]></copyright><ttl>60</ttl><dc:creator>Tedy Tri Saputro</dc:creator><item><title><![CDATA[AWS Key Management Service]]></title><description><![CDATA[ 
+ <br>
+<br><a data-tooltip-position="top" aria-label="Overview" data-href="#Overview" href="https://kronik.tedy.saputro.dev/#Overview" class="internal-link" target="_self" rel="noopener">Overview</a>
+<br><a data-tooltip-position="top" aria-label="KMS Keys Types" data-href="#KMS Keys Types" href="https://kronik.tedy.saputro.dev/#KMS_Keys_Types" class="internal-link" target="_self" rel="noopener">KMS Keys Types</a>
+<br><a data-tooltip-position="top" aria-label="Types of KMS Keys" data-href="#Types of KMS Keys" href="https://kronik.tedy.saputro.dev/#Types_of_KMS_Keys" class="internal-link" target="_self" rel="noopener">Types of KMS Keys</a>
+<br><a data-tooltip-position="top" aria-label="KMS Key Material Origin" data-href="#KMS Key Material Origin" href="https://kronik.tedy.saputro.dev/#KMS_Key_Material_Origin" class="internal-link" target="_self" rel="noopener">KMS Key Material Origin</a>
+
+<br><a data-tooltip-position="top" aria-label="Custom Key Store (CloudHSM)" data-href="#Custom Key Store (CloudHSM)" href="https://kronik.tedy.saputro.dev/#Custom_Key_Store_(CloudHSM)" class="internal-link" target="_self" rel="noopener">Custom Key Store (CloudHSM)</a>
+<br><a data-tooltip-position="top" aria-label="External" data-href="#External" href="https://kronik.tedy.saputro.dev/#External" class="internal-link" target="_self" rel="noopener">External</a>
+
+
+<br><a data-tooltip-position="top" aria-label="Pricing" data-href="#Pricing" href="https://kronik.tedy.saputro.dev/#Pricing" class="internal-link" target="_self" rel="noopener">Pricing</a>
+<br><a data-tooltip-position="top" aria-label="Copying Snapshot Across Region" data-href="#Copying Snapshot Across Region" href="https://kronik.tedy.saputro.dev/#Copying_Snapshot_Across_Region" class="internal-link" target="_self" rel="noopener">Copying Snapshot Across Region</a>
+<br><a data-tooltip-position="top" aria-label="KMS Key Policies" data-href="#KMS Key Policies" href="https://kronik.tedy.saputro.dev/#KMS_Key_Policies" class="internal-link" target="_self" rel="noopener">KMS Key Policies</a>
+<br><a data-tooltip-position="top" aria-label="Copying Snapshots accross Keys" data-href="#Copying Snapshots accross Keys" href="https://kronik.tedy.saputro.dev/#Copying_Snapshots_accross_Keys" class="internal-link" target="_self" rel="noopener">Copying Snapshots accross Keys</a>
+<br><a data-tooltip-position="top" aria-label="[Hands On] Create Key" data-href="#[Hands On] Create Key" href="https://kronik.tedy.saputro.dev/#[Hands_On]_Create_Key" class="internal-link" target="_self" rel="noopener">[Hands On] Create Key</a>
+<br><a data-tooltip-position="top" aria-label="KMS Multi-Region Keys" data-href="#KMS Multi-Region Keys" href="https://kronik.tedy.saputro.dev/#KMS_Multi-Region_Keys" class="internal-link" target="_self" rel="noopener">KMS Multi-Region Keys</a>
+
+<br><a data-tooltip-position="top" aria-label="DynamoDB Global Tables and KMS Multi-region Keys Client Side Encryption" data-href="#DynamoDB Global Tables and KMS Multi-region Keys Client Side Encryption" href="https://kronik.tedy.saputro.dev/#DynamoDB_Global_Tables_and_KMS_Multi-region_Keys_Client_Side_Encryption" class="internal-link" target="_self" rel="noopener">DynamoDB Global Tables and KMS Multi-region Keys Client Side Encryption</a>
+<br><a data-tooltip-position="top" aria-label="Global Aurora and KMS MRK Client-Side encryption" data-href="#Global Aurora and KMS MRK Client-Side encryption" href="https://kronik.tedy.saputro.dev/#Global_Aurora_and_KMS_MRK_Client-Side_encryption" class="internal-link" target="_self" rel="noopener">Global Aurora and KMS MRK Client-Side encryption</a>
+
+
+<br><br>
+<br>Setiap kali mendengar istilah enkripsi pada AWS service, hampir pasti terkait dengan KMS
+<br>AWS mengelola key enkripsi
+<br>secara penuh terintegrasi dengan IAM untuk otorisasi
+<br>Cara paling mudah untuk mengendalikan akses ke data
+<br>Kelebihan menggunakan KMS:
+
+<br>dapat mengaudit setiap API call yang dibuat oleh key melalui CloudTrail
+
+
+<br>KMS terintegrasi dengan sebagian besar AWS Service
+
+<br>EBS
+<br>S3
+<br>RDS
+<br>SSM
+
+
+<br>Jika memiliki secret data, jangan pernah menyimpannya ke dalam plaintext, terutama ke dalam code
+
+<br>KMS dapat digunakan melalui API Call (SDK, CLI)
+<br>enkripsi secret yang disimpan di dalam code / environment variables
+
+
+<br><br>
+<br>KMS Keys merupakan nama baru dari KMS Customer Master Key
+<br>Terdapat dua jenis KMS Keys
+
+<br>Symmetric (AES-256 keys)
+
+<br>1 encryption key yang digunakan untuk enkripsi dan dekripsi
+<br>AWS Service yang terintegrasi dengan KMS menggunakan symmetric key CMK
+<br>Anda tidak dapat mengakses KMS Key Unencrypted (harus memanggil KMS API untuk menggunakan key)
+
+
+<br>Asymmetric (RSA &amp; ECC Key pairs)
+
+<br>Memiliki dua jenis key
+
+<br>public (encrypt)
+<br>private (decrypt)
+
+
+<br>Digunakan untuk operasi encrypt/decrypt atau sign/verify
+<br>public key dapat didownload namun private key tidak dapat diakses secara plain
+<br>use case : 
+
+<br>enkripsi di luar AWS oleh user yang tidak dapat memanggil KMS API
+
+
+
+
+
+
+<br><br>
+<br>Beberapa jenis KMS Keys
+
+<br>Customer Managed Keys
+
+<br>key yang langsung dibuat di KMS
+<br>User dapat mengelola : Create, manage and use <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+<br>Hanya digunakan untuk AWS Account yang bersangkutan <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+<br>Automatic rotation Optional (every 1 year) <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+<br>user dapat enable/disable
+<br>rotation policy dapat diatur 
+
+<br>every year
+<br>old key preserved
+
+
+<br>Dapat menambahkan key policy (resource policy) dan audit di CloudTrail
+<br>menggunakan envelope encryption
+
+
+<br>AWS Managed Keys
+
+<br>digunakan secara eksklusif oleh AWS Service
+
+<br>aws/s3
+<br>aws/ebs
+<br>aws/redshit
+
+
+<br>User dapat view metada <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+<br>digunakan hanya pada AWS Account yang bersangkutan <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+<br>dikelola oleh AWS (secara otomatis rotated setiap 1 tahun)
+
+<br>user tidak dapat mengelola <img draggable="false" class="emoji" alt="❌" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/274c.png">
+
+
+<br>anda dapat melihat key policy dan melakukan audit pada CloudTrail
+<br>tidak dapat digunakan untuk operasi enkripsi diluar dari yang AWS lakukan
+<br>Automatic rotation :required <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+
+
+<br>AWS Owned Keys
+
+<br>dibuat dan dikelola oleh AWS digunakan oleh beberapa AWS service untuk melindungi resource
+<br>dapat digunakan oleh banyak AWS account, namun key tersebut digunakan secara internal
+<br>user tidak dapat view, use, track atau audit <img draggable="false" class="emoji" alt="❌" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/274c.png">
+<br>user tidak dapat mengelola key <img draggable="false" class="emoji" alt="❌" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/274c.png">
+<br>automatic rotation bervariasi
+
+
+
+
+<br><br>
+<br>Bagaimana me-create Key?
+
+<br>identifikasi source of the key material di KMS key
+<br>tidak dapat diubah setelah di-create (imutable)
+
+
+<br>Ada tiga origin : 
+
+<br>KMS (AWS_KMS) - default
+
+<br>AWS KMS secara otomatis create, dan manage key material  di dalam key store
+<br>jenis origin, jika user membuat key melalui menu KMS, kemudian pilih create key
+
+
+<br>External (EXTERNAL)
+
+<br>import key material dari luar
+<br>user bertanggung jawab mengelola dan mengamankan key material di luar AWS
+
+
+<br>Custom Key Store (AWS_CLOUDHSM)
+
+<br>AWS KMS membuat key material di custom key store (CloudHSM Cluster)
+
+
+
+
+<br><br>
+<br>Integrasi KMS dengan CloudHSM cluster sebagai custom key store
+
+<br>key material disimpan di CloudHSM cluster (multi AZ) yang dimiliki dan dikelola sendiri
+<br>operasi kriptografi dilakukan di dalam HSM
+
+
+<br>Use case :
+
+<br>user menginginkan kendali langsung atas HSM
+<br>KMS key perlu disimpan pada dedicated HSM
+
+
+<br><br>
+<br>user import key material-nya sendiri ke dalam KMS Key
+
+<br>Bring Your Own Key (BYOK)
+
+
+<br>user bertanggung jawab terhadap material key di luar AWS
+
+<br>security
+<br>availability
+<br>durability 
+
+
+<br>Key haruslah 256-bit symmetric key (Asymmetric key tidak didukung)
+<br>tidak dapat menggunakan Custom Key Store (CloudHSM)
+<br>Rotate key dilakukan secara manual
+
+<br>automatic key rotation tidak didukung
+
+
+<br><br>
+<br>Pricing berdasakran Jenis key pada KMS Keys
+
+<br>AWS Owned Keys (free)
+
+<br>SSE-S3
+<br>SSE-SQS
+<br>SSE-DDB
+
+
+<br>AWS Managed Key (free)
+
+<br>aws/service-name
+<br>example:
+
+<br>aws/rds
+<br>aws/ebs
+
+
+
+
+<br>Customer managed keys, (created in KMS)
+
+<br>1 usd/month
+
+
+<br>Customer managed keys, imported
+
+<br>haruslah symmetric key
+<br>1 usd/month
+
+
+
+
+<br>Pricing untuk API call to KMS
+
+<br>0.03 usd/10.000 calls
+
+
+<br>Terdapat fitur Automatic Key Rotation
+
+<br>AWS-managed KMS: otomatis rotasi tiap 1 tahun
+<br>Customer-managed KMS keys 
+
+<br>harus diaktifikan
+<br>otomatis setiap 1 tahun
+
+
+<br>Imported KMS Key : 
+
+<br>Hanya manual rotation yang dimungkinkan menggunakan alias
+
+
+
+
+<br><br>
+<br>KMS Key memiliki lingkup di satu region
+<br>Case :
+
+<br>terdapat EBS volume yang dienkripsi dengan KMS di region A
+<br>Enkripsi menggunakan KMS key A di region A
+<br>Jika EBS volume tersebut ingin dicopy ke region B. Beberapa langkah berikut harus dilakukan :
+
+<br>Buat EBS snapshot  dari EBS volume. 
+<br>jika snapshot dibuat dari EBS volume yang dienkripsi, maka snapshot tersebut juga akan terenkripsi
+<br>Untuk mengcopy ke region B. snapshot tersebut perlu di-dekrip menggunakan KMS Key A
+<br>Copy ke region B
+<br>Enkripsi ulang menggunakan KMS Key B di Region B
+<br>Create EBS volume di region B dari snapshot EBS
+
+
+
+
+<br><br>
+<br>KMS Key policies adalah cara untuk mengendalikan akses ke KMS Key
+
+<br>mirip dengan S3 Bucket policies, namun perbedaannya jika tidak ada KMS key policy pada KMS Key maka tidak ada user yang dapat mengakses KMS key tersebut
+
+
+<br>Dua jenis KMS Key Policy
+
+<br>Default KMS Key Policy
+
+<br>dibuat jika user tidak membuat specific KMS key policy
+<br>Default : mengijinkan semua orang di dalam account untuk dapat mengakses key 
+<br>Digunakan jika anda memiliki IAM Policy yang mengijinkan semua user/role dapat mengakses key
+
+
+<br>Custom KMS Key policy
+
+<br>menetapkan user, role mana saja yang dapat mengakses KMS Key
+<br>define siapa yang mengadministrasi key
+<br>berguna untuk  cross-account yang ingin mengakses KMS key 
+
+
+
+
+<br><br>
+<br>Buat snapshot yang terenkripsi dengan menggunakan KMS Key  (CMK) pada Account A
+<br>Attach KMS Key policy untuk mengotorisasi cross-account access
+<br>{
+	"Sid":"Allow use of the key with destination account",
+	"Effect":"Allow",
+	"Principal":{
+		"AWS":"arn:aws"iam::xxx"
+	},
+	"Action":[
+		"kms:Decrypt",
+		"kms:CreateGrant"
+	],
+	"Resource":"*",
+	"Condition":{
+		"StringEquals": {
+		"kms:viaService":"ec2.REGION.amazonaws.com",
+		"kms:CallerAccount":"&lt;TARGET-ACCOUNT-ID&gt;"
+		}
+	}
+
+}
+
+Copy<br>
+<br>share snapshot yang terenkripsi tersebut
+<br>Pada target account : buat copy dari snapshot pada point 3, dan enkripsi dengan CMK dari akun target
+<br>Buat volume dari snapshot pada langkah 4
+<br><br>//TODO<br><br>
+<br>Misal Primary Key pada region A, dan key ingin direplikasi ke region yang lain (region B, C, D)
+
+<br>key ID akan sama dengan primary key di region A (region asal)
+
+
+<br>Mengapa memerlukan Multi-Region Keys?
+
+<br>KMS key yangs ama di lintas region dapat digunakan bergantian pada region tersebut
+<br>misal, enkripsi di region A, dan ingin dienkripsi di region B
+<br>multi-region key memiliki :
+
+<br>key id yang sama
+<br>key material yang sama
+<br>automatic rotation
+
+
+<br>Tidak diperlukan untuk melakukan enkripsi ulang / memanggil API lintas region
+<br>KMS multi-Region tidak sama dengan  global
+
+<br>user memiliki key primary (dari region asal)
+<br>dan key replika di region tujuan
+<br>setiap key multi-region dikelola secara independen
+<br>hanya satu key primary dalam satu waktu, replica key dapat dipromosikan menjadi primary key-nya sendiri
+
+
+<br>Tidak direkomendasikan menggunakan Multi-region key kecuali pada use case yang sangat spesifik
+
+<br>karena KMS key seharusnya terikat pada satu region
+
+
+<br>Use case :
+
+<br>global client-side encryption
+<br>encryption pada Global DynamoDB
+<br>Global Aurora
+<br>Disaster Recovery
+<br>Active-active application yang dideploy lintas region
+
+
+
+
+<br><br>
+<br>Case : anda ingin melakukan enkripsi specific attribute client side pada DynamoDB table menggunakan klien enkripsi Amazon DynamoDB tertentu
+
+<br>Terdapat dua region A dan B
+<br>KMS Service pada region A memiliki MRK yang direplikasi ke region B
+<br>klien App ingin insert data ke aplikasi pada DynamoDB table di region A
+
+<br>enkripsi attribute dengan primary key menggunakan primary MRK -&gt; dilakukan di client
+<br>konsepnya tidak semua attribute di dalam table dienkripsi, namun hanya attribute tertentu, misalnya NIK
+<br>Database administratorpun tidak dapat mengetahui NIK yang dienkripsi di dalam DynamoDB Table
+<br>Karena DynamoDB merupakan global table, data enkripsi client-side direplikasi di region B
+<br>jika menggunakan MRK, client di region B dapat menggunakan low latency API untuk memanggil KMS di region B  untuk mendekripsi data client-side
+<br>Key di region A direplikasi ke region B
+
+
+
+
+<br><br>
+<br>Konsepnya sama seperti sebelumnya
+<br>anda dapat mengkripsi attribute tertentu secara client-side pada Aurora Table menggunakan AWS Encryption SDK
+<br>Terdapat dua region, 
+
+<br>Region A
+
+<br>KMS MRK -&gt; direplikasi ke region B
+
+
+<br>Region B
+
+<br>KMS replicated from region A
+
+
+
+
+<br>Client App 
+
+<br>melakukan enkripsi menggunakan primary MRK, request ke region A
+<br>encrypted attribute (1 kolom, misal NIK) di-insert ke table Aurora region A
+
+
+<br>karena Aurora merupakan Global Table, maka client-side encrypted data direplikasi ke region lain (region B)
+<br>Jika menggunakan MRK yang direplikasi pada region yang sama dengan Global Aurora DB (misal region B). App Client dapat menggunakan low-latency API call pada region B  untuk dekripsi data di sisi client
+<br>Dengan menggunakan client-side encryption, kita dapat melindungi field tertentu dan memastikan hanya dapat didekripsi oleh client yang dapat mengakses API key. field tersebut tidak akan dapat diakses oleh siapapun bahkan oleh database admin.
+]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Sat, 06 Apr 2024 17:14:49 GMT</pubDate><enclosure url="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png&quot;&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
