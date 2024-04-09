@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kronik]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://kronik.tedy.saputro.dev/</link><image><url>https://kronik.tedy.saputro.dev/lib/media/favicon.png</url><title>Kronik</title><link>https://kronik.tedy.saputro.dev/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Apr 2024 16:23:38 GMT</lastBuildDate><atom:link href="https://kronik.tedy.saputro.dev/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Apr 2024 16:23:37 GMT</pubDate><copyright><![CDATA[Tedy Tri Saputro]]></copyright><ttl>60</ttl><dc:creator>Tedy Tri Saputro</dc:creator><item><title><![CDATA[Apa itu Cloud Computing?]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kronik]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://kronik.tedy.saputro.dev/</link><image><url>https://kronik.tedy.saputro.dev/lib/media/favicon.png</url><title>Kronik</title><link>https://kronik.tedy.saputro.dev/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Apr 2024 16:48:09 GMT</lastBuildDate><atom:link href="https://kronik.tedy.saputro.dev/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Apr 2024 16:48:06 GMT</pubDate><copyright><![CDATA[Tedy Tri Saputro]]></copyright><ttl>60</ttl><dc:creator>Tedy Tri Saputro</dc:creator><item><title><![CDATA[Apa itu Cloud Computing?]]></title><description><![CDATA[ 
  <br>
 <br><a data-tooltip-position="top" aria-label="Apa itu Cloud Computing?" data-href="#Apa itu Cloud Computing?" href="https://kronik.tedy.saputro.dev/#Apa_itu_Cloud_Computing" class="internal-link" target="_self" rel="noopener">Apa itu Cloud Computing?</a>
 
@@ -89,7 +89,96 @@
 
 <br><br><br>
 <br>The cloud computing models let the user choose the level of control over the information and services that these provide
-]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/01 AWS Introduction/00 Cloud Computing Introduction.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/01 AWS Introduction/00 Cloud Computing Introduction.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Mon, 04 Mar 2024 08:53:57 GMT</pubDate></item><item><title><![CDATA[AWS Key Management Service]]></title><description><![CDATA[ 
+]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/01 AWS Introduction/00 Cloud Computing Introduction.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/01 AWS Introduction/00 Cloud Computing Introduction.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Mon, 04 Mar 2024 08:53:57 GMT</pubDate></item><item><title><![CDATA[AWS Control Tower]]></title><description><![CDATA[ 
+ <br>
+<br><a data-tooltip-position="top" aria-label="Overview" data-href="#Overview" href="https://kronik.tedy.saputro.dev/#Overview" class="internal-link" target="_self" rel="noopener">Overview</a>
+<br><a data-tooltip-position="top" aria-label="Account Factory" data-href="#Account Factory" href="https://kronik.tedy.saputro.dev/#Account_Factory" class="internal-link" target="_self" rel="noopener">Account Factory</a>
+<br><a data-tooltip-position="top" aria-label="Detect and Remediate Policy Violations" data-href="#Detect and Remediate Policy Violations" href="https://kronik.tedy.saputro.dev/#Detect_and_Remediate_Policy_Violations" class="internal-link" target="_self" rel="noopener">Detect and Remediate Policy Violations</a>
+
+<br><a data-tooltip-position="top" aria-label="Guardrail" data-href="#Guardrail" href="https://kronik.tedy.saputro.dev/#Guardrail" class="internal-link" target="_self" rel="noopener">Guardrail</a>
+<br><a data-tooltip-position="top" aria-label="Guardrails Level" data-href="#Guardrails Level" href="https://kronik.tedy.saputro.dev/#Guardrails_Level" class="internal-link" target="_self" rel="noopener">Guardrails Level</a>
+
+
+<br><br>
+<br>Cara mudah untuk setup dan mengelola multi-account AWS environment yang aman dan compliant berbasis best practices
+<br>Benefits
+
+<br>Automate set up environment di dalam beberapa klik
+<br>Melakukan otomasi pengelolaan policy yang diselenggarakan menggunakan guardrails
+<br>Deteksi pelanggaran policy dan melakukan remediasi pelanggaran tersebut
+<br>memonitor compliance melalui dashboard interactive
+
+
+<br>AWS Control Tower berjalan di atas AWS Organizations
+
+<br>Secara otomatis mengatur AWS Organization untuk mengorganisasi account dan mengimplementasikan SCP
+
+
+<br><br>
+<br>Account Factory mengotomatisasi provisioning dan deployment
+<br>Memungkinkan untuk membuat pre-approved baseline dan configuration options for AWS Account di dalam organization
+
+<br>VPC default configuration
+<br>subnet 
+<br>regions
+
+
+<br>Gunakan AWS Service Catalog untuk melakukan provisi account AWS yang baru
+<br>Case : 
+
+<br>AWS Cloud terhubung via VPN/DX dengan Corporate Datancenter
+<br>Corporate datacenter menggunakan ADFS
+<br>Di dalam AWS Cloud terdapat Control Tower - Landing Zone yang dapat membuat member account melalui Account Factory. 
+<br>Di dalam Control Tower terdapat IAM Identity center yang terhubung dengan AWS Managed Microsoft AD
+
+
+<br><br><br>
+<br>Menyediakan tata kelola yang sedang dijalankan pada lingkungan Control Tower (pada level AWS Account) 
+<br>detect and remediate policy violations
+<br>Dua jenis guardrails
+
+<br>Preventive - menggunakan SCP 
+
+<br>Disallow Creation of Access Key from the root user
+
+
+<br>Detective
+
+<br>Menggunakan AWS Config 
+
+<br>misalnya mendeteksi apakah MFA untuk Root User di-enable atau tidak
+<br>identify non-compliant resouce (misalnya resource yang tidak diberi tagging) 
+
+
+
+
+
+
+<br>Dapat diintegrasikan dengan Amazon SNS untuk notifikasi
+<br><br>
+<br>Beberapa level peringatan yang ada di Guardrails
+
+<br>Mandatory
+
+<br>Secara otomatis dienable dan diberlakukan oleh AWS Control Tower
+<br>Example : Disallow public read access untuk Log Archive Account
+
+
+<br>Strongly Recommended
+
+<br>berdasarkan best practices AWS (opsional)
+<br>Example : enable encryption for EBS volume yang di-attach di EC2 instance
+
+
+<br>Elective
+
+<br>Biasa digunakan di enterprise (opsional)
+<br>Example : Disallow delete action tanpa MFA di S3 buckets
+
+
+
+
+]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0208 AWS Control Tower.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0208 AWS Control Tower.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Sun, 07 Apr 2024 21:29:10 GMT</pubDate></item><item><title><![CDATA[AWS Key Management Service]]></title><description><![CDATA[ 
  <br>
 <br><a data-tooltip-position="top" aria-label="Overview" data-href="#Overview" href="https://kronik.tedy.saputro.dev/#Overview" class="internal-link" target="_self" rel="noopener">Overview</a>
 <br><a data-tooltip-position="top" aria-label="KMS Keys Types" data-href="#KMS Keys Types" href="https://kronik.tedy.saputro.dev/#KMS_Keys_Types" class="internal-link" target="_self" rel="noopener">KMS Keys Types</a>
@@ -487,7 +576,264 @@ Copy<br>
 <br>karena Aurora merupakan Global Table, maka client-side encrypted data direplikasi ke region lain (region B)
 <br>Jika menggunakan MRK yang direplikasi pada region yang sama dengan Global Aurora DB (misal region B). App Client dapat menggunakan low-latency API call pada region B  untuk dekripsi data di sisi client
 <br>Dengan menggunakan client-side encryption, kita dapat melindungi field tertentu dan memastikan hanya dapat didekripsi oleh client yang dapat mengakses API key. field tersebut tidak akan dapat diakses oleh siapapun bahkan oleh database admin.
-]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Sat, 06 Apr 2024 17:14:49 GMT</pubDate></item><item><title><![CDATA[Apa itu Java?]]></title><description><![CDATA[ 
+]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Sat, 06 Apr 2024 17:14:49 GMT</pubDate></item><item><title><![CDATA[AWS Resource Access Manager]]></title><description><![CDATA[ 
+ <br>
+<br><a data-tooltip-position="top" aria-label="Overview" data-href="#Overview" href="https://kronik.tedy.saputro.dev/#Overview" class="internal-link" target="_self" rel="noopener">Overview</a>
+<br><a data-tooltip-position="top" aria-label="Managed Prefix List" data-href="#Managed Prefix List" href="https://kronik.tedy.saputro.dev/#Managed_Prefix_List" class="internal-link" target="_self" rel="noopener">Managed Prefix List</a>
+<br><a data-tooltip-position="top" aria-label="Route 53 Outbound Resolver" data-href="#Route 53 Outbound Resolver" href="https://kronik.tedy.saputro.dev/#Route_53_Outbound_Resolver" class="internal-link" target="_self" rel="noopener">Route 53 Outbound Resolver</a>
+<br><br>
+<br>Berbagi AWS Resource yang dimiliki oleh AWS account ke AWS Account yang lain
+
+<br>Account lain (di luar atau di dalam AWS Organization)
+
+
+<br>Kegunaan : Menghindari resource duplication
+<br>Apa saja yang dibagi di dalam RAM
+
+<br>VPC subnet
+
+<br>Memungkinkan untuk memiliki semua resource yang dilaunch di dalam subnet yang sama
+<br>Harus berada di AWS Organization yang sama
+<br>default VPC dan Security Groups tidak dapat dishare
+<br>Partisipan dapat mengelola masing - masing resourcenya di dalam subnet.
+<br>partisipan tidak dapat melihat, modify, delete resource yang dimiliki oleh partisipan yang lain atau owner
+
+
+<br>AWS Transit Gateway
+<br>Route 53 (Resolver Rules, DNS Firewall Rule Groups)
+<br>License Manager Configurations
+<br>Aurora DB Cluster
+<br>ACM Private Certificate Authority
+<br>CodeBuild Project 
+<br>EC2 (Dedicated Host, Capacity Reservation)
+<br>AWS Glue (Catalog, Database, Table)
+<br>AWS Network Firewall Policies
+<br>AWS Resource Groups
+<br>System Manager Incident Manager (Contact, Response Plans)
+<br>AWS Outpost (Outpost, Site)
+
+
+<br>Example :
+
+<br>Terdapat VPC yang di-share kedua akun
+
+<br>Account 1
+<br>Account 2
+
+
+<br>Setiap account bertanggung jawab terhadap resource yang dideploy-nya ke dalam VPC
+<br>Masing2 account hanya dapat view, modify/delete resource yang lain dari account yang lain
+<br>Network  dishared, sehingga
+
+<br>apapun yang dideploy di VPC dapat berkomunikasi satu sama lain menggunakan private IP
+
+<br>tidak perlu VPC Peering
+
+
+<br>security group dari account yang lain dapat merujuk ke maximum security
+
+
+
+
+<br><br>
+<br>Kumpulan 1 atau lebih CIDR blocks yang digunakan untuk mempermudah dalam hal konfigurasi dan mengelola security groups dan Route Tables
+<br>Misalnya : 
+
+<br>Account A memiliki Prefix List A
+
+<br>CIDR 1
+<br>CIDR 2
+<br>CIDR 3
+
+
+<br>Prefix List A dapat dishare ke Account B untuk dapat digunakan di dalam Security Group Account B
+
+
+<br><br>
+<br>Ada dua jenis Prefix List
+
+<br>Customer Managed Prefix List
+
+<br>Kumpulan CIDR yang di-define dan dikelola oleh user
+<br>dapat dibagi ke Akun AWS lain atau  organization AWS 
+<br>Modify hingga update banyak security group dilakukan secara terpusat
+
+
+<br>AWS-Managed Prefix list
+
+<br>Kumpulan CIDR dari AWS service 
+<br>user tidak dapat create, modify, share atau delete CIDR tersebut
+
+
+
+
+<br><br>
+<br>Membantu user untuk melakukan scale forwading rules ke DNS, untuk user yang memiliki multiple account dan VPC
+<br>Misal : 
+
+<br>Main Account : 
+
+<br>Resolver Rule for Route 53
+<br>Forwarding rules
+
+
+<br>Resolver tersebut dishare ke account lain dan diasosiasikan dengan Resolver Outbound Endpoint\
+
+
+]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0209 AWS Resource Access Manager.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0209 AWS Resource Access Manager.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Wed, 03 Apr 2024 16:59:48 GMT</pubDate></item><item><title><![CDATA[CloudHSM]]></title><description><![CDATA[ 
+ <br>
+<br><a data-tooltip-position="top" aria-label="Overview" data-href="#Overview" href="https://kronik.tedy.saputro.dev/#Overview" class="internal-link" target="_self" rel="noopener">Overview</a>
+
+<br><a data-tooltip-position="top" aria-label="KMS vs CloudHSM" data-href="#KMS vs CloudHSM" href="https://kronik.tedy.saputro.dev/#KMS_vs_CloudHSM" class="internal-link" target="_self" rel="noopener">KMS vs CloudHSM</a>
+<br><a data-tooltip-position="top" aria-label="Feature" data-href="#Feature" href="https://kronik.tedy.saputro.dev/#Feature" class="internal-link" target="_self" rel="noopener">Feature</a>
+
+
+<br><a data-tooltip-position="top" aria-label="CloudHSM Diagram" data-href="#CloudHSM Diagram" href="https://kronik.tedy.saputro.dev/#CloudHSM_Diagram" class="internal-link" target="_self" rel="noopener">CloudHSM Diagram</a>
+<br><a data-tooltip-position="top" aria-label="High Availability" data-href="#High Availability" href="https://kronik.tedy.saputro.dev/#High_Availability" class="internal-link" target="_self" rel="noopener">High Availability</a>
+<br><a data-tooltip-position="top" aria-label="CloudHSM vs KMS" data-href="#CloudHSM vs KMS" href="https://kronik.tedy.saputro.dev/#CloudHSM_vs_KMS" class="internal-link" target="_self" rel="noopener">CloudHSM vs KMS</a>
+
+<br><a data-tooltip-position="top" aria-label="AWS KMS" data-href="#AWS KMS" href="https://kronik.tedy.saputro.dev/#AWS_KMS" class="internal-link" target="_self" rel="noopener">AWS KMS</a>
+<br><a data-tooltip-position="top" aria-label="AWS CloudHSM" data-href="#AWS CloudHSM" href="https://kronik.tedy.saputro.dev/#AWS_CloudHSM" class="internal-link" target="_self" rel="noopener">AWS CloudHSM</a>
+
+
+<br><a data-tooltip-position="top" aria-label="SSL Offloading" data-href="#SSL Offloading" href="https://kronik.tedy.saputro.dev/#SSL_Offloading" class="internal-link" target="_self" rel="noopener">SSL Offloading</a>
+<br><br><br>
+<br>pada KMS, AWS yang mengelola software yang digunakan untuk enkripsi
+<br>pada CloudHSM, aws melakukan provisi encryption hadware
+
+<br>HSM -&gt; High Security Module. Dedicated hardware untuk keperluan enkripsi
+<br>User bertanggungjawab terhadap keseluruhan enkripsi key (bukan AWS)
+
+<br>security
+<br>maintanance
+<br>backup encryption key
+
+
+
+
+<br><br>
+<br>HSM device memiliki fitur tamper resistance
+
+<br>FIPS 140 - 2 level 3 compliance 
+
+
+<br>mendukung enkripsi simetrik dan asimetrik
+<br>harus menggunakan CloudHSM client Software untuk mengakses CloudHSM
+<br>terintegrasi dengan Redshift untuk database encryption dan key management
+<br>pilihan ideal jika menggunakan SSE-C encryption
+<br><br>
+<br>AWS mengelola hardware dari HSM dan menyediakan software CloudHSM
+<br>penggunaan CloudHSM dan resikonya diserahkan sepenuhnya kepada user
+<br>untuk mengelola key dll diperlukan CloudHSM Client yang mengakses CloudHSM device melalui SSL Connection
+<br>Shared Responbility : 
+<br>IAM Permission :
+
+<br>yang dilakukan AWS :
+
+<br>Create, describe, delete HSM cluster 
+
+
+<br>yang menjadi tanggung jawab user :
+
+<br>operasional dan apapun yang terjadi di dalam HSM Cluster ~ mirip dengan RDS
+
+<br>manage keys (CRUD keys)
+<br>manage user
+
+
+
+
+
+
+<br><br>
+<br>CloudHSM cluster dapat dibuat lintas AZ
+
+<br>availability
+<br>durability
+
+
+<br><br><br>
+<br>multi-tenant
+<br>FIPS 140-2 level 3
+<br>Master keys :
+
+<br>AWS Owned key
+<br>AWS Managed keys
+<br>Customer managed KMS key
+
+
+<br>Jenis Key : 
+
+<br>simetrik
+<br>asimetrik
+<br>digital signing
+
+
+<br>Dapat diakses di banyak AWS region
+
+<br>KMS key replication
+
+
+<br>tidak terdapat fitur cryptographic acceleration
+<br>access dan authentication menggunakan AWS IAM
+<br>HA
+
+<br>AWS managed service
+
+
+<br>Audit :
+
+<br>CloudTrail
+<br>CloudWatch
+
+
+<br>FreeTier
+<br><br>
+<br>single-tenant
+<br>FIPS 140-2 level 3
+<br>Master Keys
+
+<br>Customer Managed CMK
+
+
+<br>Jenis key
+
+<br>Simetrik
+<br>asimetrik
+<br>Digital signing dan hashing
+
+
+<br>Key accesibility
+
+<br>dapat dideploy dan dikelola di VPC
+<br>dapat dishare lintas VPC 
+
+<br>menggunakan VPC peering
+
+
+
+
+<br>akselerasi kriptografi
+
+<br>SSL/TLS accel
+<br>Oracle TDS accel
+
+
+<br>user dapat membuat user dan mengelola permission
+<br>HA 
+
+<br>dapat menambahkan banyak HSM di-lintas AZ
+
+
+<br>Audit : 
+
+<br>CloudTrail
+<br>CloudWatch
+<br>MFA support
+
+
+<br>Paid
+<br>]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0214 CloudHSM.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0214 CloudHSM.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Mon, 08 Apr 2024 04:20:24 GMT</pubDate></item><item><title><![CDATA[Apa itu Java?]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="What is Java" data-href="#What is Java" href="https://kronik.tedy.saputro.dev/#What_is_Java" class="internal-link" target="_self" rel="noopener">What is Java</a>
 <br><a data-tooltip-position="top" aria-label="Why Learn Java" data-href="#Why Learn Java" href="https://kronik.tedy.saputro.dev/#Why_Learn_Java" class="internal-link" target="_self" rel="noopener">Why Learn Java</a>
@@ -596,4 +942,34 @@ Copy<br>
 <br>alternatifnya dapat menggunakan JRE yang dibuat oleh vendor lain
 
 
-<br><br>]]></description><link>https://kronik.tedy.saputro.dev/04 Belajar Java 21/01 Introduction/0102 Java Inside.html</link><guid isPermaLink="false">04 Belajar Java 21/01 Introduction/0102 Java Inside.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Tue, 09 Apr 2024 16:22:53 GMT</pubDate></item></channel></rss>
+<br><br>
+<br>Java Development Kit
+<br>Kit / perangkat yang dibutuhkan programmer untuk mengembangkan perangkat lunak berbasis Java
+
+<br>Salah satu komponen JDK adalah JRE
+
+
+<br><br>
+<br>Tergantung konteks pembicaraan
+<br>Dari sisi teknis antara OpenJDK dan JDK sama saja
+
+<br>untuk pemula istilah OpenJDK dan JDK tidak terlalu penting sehingga dapat dianggap sama 
+
+
+<br>Untuk pengembangan aplikasi komersil dan mesin production istilah OpenJDK dan JDK dapat berarti berbeda 
+
+<br>OpenJDK 
+
+<br>Implementasi Java SE yang bersifat Open Source
+
+
+<br>JDK implementasi Java SE, yang merupakan product dari Oracle, lisensinya berbeda. 
+
+<br>Diturunkan dari OpenJDK + komponen tambahan dari Oracle
+
+
+
+
+<br>Perbedaan terbesar antara OpenJDK dan Oracle JDK -&gt; lisensi
+]]></description><link>https://kronik.tedy.saputro.dev/04 Belajar Java 21/01 Introduction/0102 Java Inside.html</link><guid isPermaLink="false">04 Belajar Java 21/01 Introduction/0102 Java Inside.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Tue, 09 Apr 2024 16:39:29 GMT</pubDate></item><item><title><![CDATA[Environment Setup]]></title><description><![CDATA[ 
+ <br>Table of contents: no headings found]]></description><link>https://kronik.tedy.saputro.dev/04 Belajar Java 21/02 Environment Setup/0201 Environment Setup.html</link><guid isPermaLink="false">04 Belajar Java 21/02 Environment Setup/0201 Environment Setup.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Tue, 09 Apr 2024 16:41:20 GMT</pubDate></item></channel></rss>
