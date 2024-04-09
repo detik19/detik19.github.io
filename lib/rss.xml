@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kronik]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://kronik.tedy.saputro.dev/</link><image><url>https://kronik.tedy.saputro.dev/lib/media/favicon.png</url><title>Kronik</title><link>https://kronik.tedy.saputro.dev/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Apr 2024 15:52:18 GMT</lastBuildDate><atom:link href="https://kronik.tedy.saputro.dev/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Apr 2024 15:52:18 GMT</pubDate><copyright><![CDATA[Tedy Tri Saputro]]></copyright><ttl>60</ttl><dc:creator>Tedy Tri Saputro</dc:creator><item><title><![CDATA[Apa itu Cloud Computing?]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kronik]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://kronik.tedy.saputro.dev/</link><image><url>https://kronik.tedy.saputro.dev/lib/media/favicon.png</url><title>Kronik</title><link>https://kronik.tedy.saputro.dev/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Apr 2024 16:23:38 GMT</lastBuildDate><atom:link href="https://kronik.tedy.saputro.dev/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Apr 2024 16:23:37 GMT</pubDate><copyright><![CDATA[Tedy Tri Saputro]]></copyright><ttl>60</ttl><dc:creator>Tedy Tri Saputro</dc:creator><item><title><![CDATA[Apa itu Cloud Computing?]]></title><description><![CDATA[ 
  <br>
 <br><a data-tooltip-position="top" aria-label="Apa itu Cloud Computing?" data-href="#Apa itu Cloud Computing?" href="https://kronik.tedy.saputro.dev/#Apa_itu_Cloud_Computing" class="internal-link" target="_self" rel="noopener">Apa itu Cloud Computing?</a>
 
@@ -524,4 +524,76 @@ Copy<br>
 <br>Java EE -&gt; sekarang bernama JakartaEE
 
 
-<br>]]></description><link>https://kronik.tedy.saputro.dev/04 Belajar Java 21/01 Introduction/01 Introduction.html</link><guid isPermaLink="false">04 Belajar Java 21/01 Introduction/01 Introduction.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Tue, 09 Apr 2024 15:50:46 GMT</pubDate></item></channel></rss>
+<br><br>
+<br>Bahasa pemrograman paling populer
+
+<br><a data-tooltip-position="top" aria-label="https://www.tiobe.com/tiobe-index/" rel="noopener" class="external-link" href="https://www.tiobe.com/tiobe-index/" target="_blank">Peringkat 5 besar TIOBE Index </a>
+
+
+<br>OOP
+
+<br>Dibutuhkan untuk membangun software yang kompleks agar mudah di-maintain
+<br>Memiliki paradigma OOP paling kuat dibandingkan Go, JavaScript, Python
+
+
+<br>Ekosistem yang matang
+
+<br>Banyak literatur untuk belajar dan tempat bertanya jika menemui kesulitan
+
+
+<br>Banyak framework dan library yang tersedia 
+
+<br>Terkait dengan alasan sebelumnya (ekosistem yang matang)
+<br>Salah satu keunggulan dibandingkan bahasa pemrograman lain yang sedang hype (dari yang OpenSource hingga paid)
+
+<br>Framework : Spring, Quarkus, Micronaut, Play, dll
+<br>ORM : Hibernate, EclipseLink, MyBatis
+
+
+
+
+]]></description><link>https://kronik.tedy.saputro.dev/04 Belajar Java 21/01 Introduction/0101 Java Introduction.html</link><guid isPermaLink="false">04 Belajar Java 21/01 Introduction/0101 Java Introduction.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Tue, 09 Apr 2024 16:19:45 GMT</pubDate></item><item><title><![CDATA[Java Inside]]></title><description><![CDATA[ 
+ <br>
+<br><a data-tooltip-position="top" aria-label="How Java Works" data-href="#How Java Works" href="https://kronik.tedy.saputro.dev/#How_Java_Works" class="internal-link" target="_self" rel="noopener">How Java Works</a>
+<br><a data-tooltip-position="top" aria-label="What is JVM" data-href="#What is JVM" href="https://kronik.tedy.saputro.dev/#What_is_JVM" class="internal-link" target="_self" rel="noopener">What is JVM</a>
+<br><a data-tooltip-position="top" aria-label="JRE" data-href="#JRE" href="https://kronik.tedy.saputro.dev/#JRE" class="internal-link" target="_self" rel="noopener">JRE</a>
+<br><a data-tooltip-position="top" aria-label="JDK" data-href="#JDK" href="https://kronik.tedy.saputro.dev/#JDK" class="internal-link" target="_self" rel="noopener">JDK</a>
+<br><a data-tooltip-position="top" aria-label="OpenJDK vs JDK" data-href="#OpenJDK vs JDK" href="https://kronik.tedy.saputro.dev/#OpenJDK_vs_JDK" class="internal-link" target="_self" rel="noopener">OpenJDK vs JDK</a>
+<br><br><br>
+<br>Java Virtual Machine
+<br>Sebuah konsep atau spesifikasi terkait mesin virtual yang dapat digunakan untuk menjalankan Java Bytecode
+<br>Implementasi JVM
+
+<br>Hotspot (Open-source, implemantion by Oracle)
+<br>Eclipse Open J9
+
+<br>dikelola Eclipse Foundation
+
+
+<br>GraalVM 
+
+<br>berbasis HotSpot/OpenJDK dengan 
+<br>kemampuan polyglot
+
+<br>menjalankan banyak bahasa pemrograman seperti JavaScript, Python dll
+
+
+
+
+
+
+<br><br>
+<br>software layer yang berjalan di atas OS komputer dan menyediakan 
+
+<br>class libraries
+<br>resources yang dibutuhkan oleh aplikasi java agar dapat berjalan
+<br>include JVM
+
+
+<br>Sebelum Java 11 terdapat aplikasi JRE standalone, yang dapat diinstal jika sebuah komputer diinginkan untuk menjalankan aplikasi berbasis java
+<br>Setelah Java 11 tidak lagi ada JRE standalone
+
+<br>alternatifnya dapat menggunakan JRE yang dibuat oleh vendor lain
+
+
+<br><br>]]></description><link>https://kronik.tedy.saputro.dev/04 Belajar Java 21/01 Introduction/0102 Java Inside.html</link><guid isPermaLink="false">04 Belajar Java 21/01 Introduction/0102 Java Inside.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Tue, 09 Apr 2024 16:22:53 GMT</pubDate></item></channel></rss>
