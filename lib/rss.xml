@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kronik]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://kronik.tedy.saputro.dev/</link><image><url>https://kronik.tedy.saputro.dev/lib/media/favicon.png</url><title>Kronik</title><link>https://kronik.tedy.saputro.dev/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 08 Apr 2024 15:56:54 GMT</lastBuildDate><atom:link href="https://kronik.tedy.saputro.dev/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 08 Apr 2024 15:56:53 GMT</pubDate><copyright><![CDATA[Tedy Tri Saputro]]></copyright><ttl>60</ttl><dc:creator>Tedy Tri Saputro</dc:creator><item><title><![CDATA[AWS Key Management Service]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kronik]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://kronik.tedy.saputro.dev/</link><image><url>https://kronik.tedy.saputro.dev/lib/media/favicon.png</url><title>Kronik</title><link>https://kronik.tedy.saputro.dev/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 09 Apr 2024 05:16:41 GMT</lastBuildDate><atom:link href="https://kronik.tedy.saputro.dev/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 09 Apr 2024 05:16:40 GMT</pubDate><copyright><![CDATA[Tedy Tri Saputro]]></copyright><ttl>60</ttl><dc:creator>Tedy Tri Saputro</dc:creator><item><title><![CDATA[AWS Key Management Service]]></title><description><![CDATA[ 
  <br>
 <br><a data-tooltip-position="top" aria-label="Overview" data-href="#Overview" href="https://kronik.tedy.saputro.dev/#Overview" class="internal-link" target="_self" rel="noopener">Overview</a>
 <br><a data-tooltip-position="top" aria-label="KMS Keys Types" data-href="#KMS Keys Types" href="https://kronik.tedy.saputro.dev/#KMS_Keys_Types" class="internal-link" target="_self" rel="noopener">KMS Keys Types</a>
@@ -80,9 +80,9 @@
 <br>Customer Managed Keys
 
 <br>key yang langsung dibuat di KMS
-<br>User dapat mengelola : Create, manage and use <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
-<br>Hanya digunakan untuk AWS Account yang bersangkutan <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
-<br>Automatic rotation Optional (every 1 year) <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+<br>User dapat mengelola : Create, manage and use ✅
+<br>Hanya digunakan untuk AWS Account yang bersangkutan ✅
+<br>Automatic rotation Optional (every 1 year) ✅
 <br>user dapat enable/disable
 <br>rotation policy dapat diatur 
 
@@ -103,24 +103,24 @@
 <br>aws/redshit
 
 
-<br>User dapat view metada <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
-<br>digunakan hanya pada AWS Account yang bersangkutan <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+<br>User dapat view metada ✅
+<br>digunakan hanya pada AWS Account yang bersangkutan ✅
 <br>dikelola oleh AWS (secara otomatis rotated setiap 1 tahun)
 
-<br>user tidak dapat mengelola <img draggable="false" class="emoji" alt="❌" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/274c.png">
+<br>user tidak dapat mengelola ❌
 
 
 <br>anda dapat melihat key policy dan melakukan audit pada CloudTrail
 <br>tidak dapat digunakan untuk operasi enkripsi diluar dari yang AWS lakukan
-<br>Automatic rotation :required <img draggable="false" class="emoji" alt="✅" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png">
+<br>Automatic rotation :required ✅
 
 
 <br>AWS Owned Keys
 
 <br>dibuat dan dikelola oleh AWS digunakan oleh beberapa AWS service untuk melindungi resource
 <br>dapat digunakan oleh banyak AWS account, namun key tersebut digunakan secara internal
-<br>user tidak dapat view, use, track atau audit <img draggable="false" class="emoji" alt="❌" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/274c.png">
-<br>user tidak dapat mengelola key <img draggable="false" class="emoji" alt="❌" src="https://twemoji.maxcdn.com/v/13.1.0/72x72/274c.png">
+<br>user tidak dapat view, use, track atau audit ❌
+<br>user tidak dapat mengelola key ❌
 <br>automatic rotation bervariasi
 
 
@@ -396,4 +396,108 @@ Copy<br>
 <br>karena Aurora merupakan Global Table, maka client-side encrypted data direplikasi ke region lain (region B)
 <br>Jika menggunakan MRK yang direplikasi pada region yang sama dengan Global Aurora DB (misal region B). App Client dapat menggunakan low-latency API call pada region B  untuk dekripsi data di sisi client
 <br>Dengan menggunakan client-side encryption, kita dapat melindungi field tertentu dan memastikan hanya dapat didekripsi oleh client yang dapat mengakses API key. field tersebut tidak akan dapat diakses oleh siapapun bahkan oleh database admin.
-]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Sat, 06 Apr 2024 17:14:49 GMT</pubDate><enclosure url="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://twemoji.maxcdn.com/v/13.1.0/72x72/2705.png"&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
+]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Sat, 06 Apr 2024 17:14:49 GMT</pubDate></item><item><title><![CDATA[AWS Resource Access Manager]]></title><description><![CDATA[ 
+ <br>
+<br><a data-tooltip-position="top" aria-label="Overview" data-href="#Overview" href="https://kronik.tedy.saputro.dev/#Overview" class="internal-link" target="_self" rel="noopener">Overview</a>
+<br><a data-tooltip-position="top" aria-label="Managed Prefix List" data-href="#Managed Prefix List" href="https://kronik.tedy.saputro.dev/#Managed_Prefix_List" class="internal-link" target="_self" rel="noopener">Managed Prefix List</a>
+<br><a data-tooltip-position="top" aria-label="Route 53 Outbound Resolver" data-href="#Route 53 Outbound Resolver" href="https://kronik.tedy.saputro.dev/#Route_53_Outbound_Resolver" class="internal-link" target="_self" rel="noopener">Route 53 Outbound Resolver</a>
+<br><br>
+<br>Berbagi AWS Resource yang dimiliki oleh AWS account ke AWS Account yang lain
+
+<br>Account lain (di luar atau di dalam AWS Organization)
+
+
+<br>Kegunaan : Menghindari resource duplication
+<br>Apa saja yang dibagi di dalam RAM
+
+<br>VPC subnet
+
+<br>Memungkinkan untuk memiliki semua resource yang dilaunch di dalam subnet yang sama
+<br>Harus berada di AWS Organization yang sama
+<br>default VPC dan Security Groups tidak dapat dishare
+<br>Partisipan dapat mengelola masing - masing resourcenya di dalam subnet.
+<br>partisipan tidak dapat melihat, modify, delete resource yang dimiliki oleh partisipan yang lain atau owner
+
+
+<br>AWS Transit Gateway
+<br>Route 53 (Resolver Rules, DNS Firewall Rule Groups)
+<br>License Manager Configurations
+<br>Aurora DB Cluster
+<br>ACM Private Certificate Authority
+<br>CodeBuild Project 
+<br>EC2 (Dedicated Host, Capacity Reservation)
+<br>AWS Glue (Catalog, Database, Table)
+<br>AWS Network Firewall Policies
+<br>AWS Resource Groups
+<br>System Manager Incident Manager (Contact, Response Plans)
+<br>AWS Outpost (Outpost, Site)
+
+
+<br>Example :
+
+<br>Terdapat VPC yang di-share kedua akun
+
+<br>Account 1
+<br>Account 2
+
+
+<br>Setiap account bertanggung jawab terhadap resource yang dideploy-nya ke dalam VPC
+<br>Masing2 account hanya dapat view, modify/delete resource yang lain dari account yang lain
+<br>Network  dishared, sehingga
+
+<br>apapun yang dideploy di VPC dapat berkomunikasi satu sama lain menggunakan private IP
+
+<br>tidak perlu VPC Peering
+
+
+<br>security group dari account yang lain dapat merujuk ke maximum security
+
+
+
+
+<br><br>
+<br>Kumpulan 1 atau lebih CIDR blocks yang digunakan untuk mempermudah dalam hal konfigurasi dan mengelola security groups dan Route Tables
+<br>Misalnya : 
+
+<br>Account A memiliki Prefix List A
+
+<br>CIDR 1
+<br>CIDR 2
+<br>CIDR 3
+
+
+<br>Prefix List A dapat dishare ke Account B untuk dapat digunakan di dalam Security Group Account B
+
+
+<br><br>
+<br>Ada dua jenis Prefix List
+
+<br>Customer Managed Prefix List
+
+<br>Kumpulan CIDR yang di-define dan dikelola oleh user
+<br>dapat dibagi ke Akun AWS lain atau  organization AWS 
+<br>Modify hingga update banyak security group dilakukan secara terpusat
+
+
+<br>AWS-Managed Prefix list
+
+<br>Kumpulan CIDR dari AWS service 
+<br>user tidak dapat create, modify, share atau delete CIDR tersebut
+
+
+
+
+<br><br>
+<br>Membantu user untuk melakukan scale forwading rules ke DNS, untuk user yang memiliki multiple account dan VPC
+<br>Misal : 
+
+<br>Main Account : 
+
+<br>Resolver Rule for Route 53
+<br>Forwarding rules
+
+
+<br>Resolver tersebut dishare ke account lain dan diasosiasikan dengan Resolver Outbound Endpoint\
+
+
+]]></description><link>https://kronik.tedy.saputro.dev/02 Belajar AWS untuk Programmer/03 Account Security/0209 AWS Resource Access Manager.html</link><guid isPermaLink="false">02 Belajar AWS untuk Programmer/03 Account Security/0209 AWS Resource Access Manager.md</guid><dc:creator><![CDATA[Tedy Tri Saputro]]></dc:creator><pubDate>Wed, 03 Apr 2024 16:59:48 GMT</pubDate></item></channel></rss>
