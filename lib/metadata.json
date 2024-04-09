@@ -1,13 +1,16 @@
 {
   "vaultName": "Kronik",
-  "lastExport": 1712639800552,
+  "lastExport": 1712643471703,
   "pluginVersion": "1.8.01",
-  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title",
+  "validBodyClasses": "publish css-settings-manager show-inline-title theme-dark",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
+    "02 Belajar AWS untuk Programmer/01 AWS Introduction/00 Cloud Computing Introduction.md",
+    "02 Belajar AWS untuk Programmer/01 AWS Introduction/01 Mengenal AWS.md",
     "02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.md",
-    "02 Belajar AWS untuk Programmer/03 Account Security/0209 AWS Resource Access Manager.md",
+    "02 Belajar AWS untuk Programmer/07 Monitoring, Load Balancing and Scaling/02 Load Balancing/070201-alb-http-based-traffic-GLB.drawio.svg",
+    "02 Belajar AWS untuk Programmer/07 Monitoring, Load Balancing and Scaling/02 Load Balancing/070201 Elastic Load Balancing.md",
     "index.md",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
@@ -42,91 +45,91 @@
   ],
   "fileInfo": {
     "02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.md": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 10128,
       "exportedPath": "02 Belajar AWS untuk Programmer/03 Account Security/0210 AWS KMS.html",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
@@ -264,15 +267,33 @@
       "dependencies": []
     },
     "index.md": {
-      "modifiedTime": 1712639800552,
+      "modifiedTime": 1712643471703,
       "sourceSize": 20,
       "exportedPath": "index.html",
       "dependencies": []
     },
-    "02 Belajar AWS untuk Programmer/03 Account Security/0209 AWS Resource Access Manager.md": {
-      "modifiedTime": 1712639800552,
-      "sourceSize": 2827,
-      "exportedPath": "02 Belajar AWS untuk Programmer/03 Account Security/0209 AWS Resource Access Manager.html",
+    "02 Belajar AWS untuk Programmer/01 AWS Introduction/00 Cloud Computing Introduction.md": {
+      "modifiedTime": 1712643471703,
+      "sourceSize": 4342,
+      "exportedPath": "02 Belajar AWS untuk Programmer/01 AWS Introduction/00 Cloud Computing Introduction.html",
+      "dependencies": []
+    },
+    "02 Belajar AWS untuk Programmer/01 AWS Introduction/01 Mengenal AWS.md": {
+      "modifiedTime": 1712643471703,
+      "sourceSize": 629,
+      "exportedPath": "02 Belajar AWS untuk Programmer/01 AWS Introduction/01 Mengenal AWS.html",
+      "dependencies": []
+    },
+    "02 Belajar AWS untuk Programmer/07 Monitoring, Load Balancing and Scaling/02 Load Balancing/070201-alb-http-based-traffic-GLB.drawio.svg": {
+      "modifiedTime": 1712643471703,
+      "sourceSize": 150314,
+      "exportedPath": "02 Belajar AWS untuk Programmer/07 Monitoring, Load Balancing and Scaling/02 Load Balancing/070201-alb-http-based-traffic-GLB.drawio.svg",
+      "dependencies": []
+    },
+    "02 Belajar AWS untuk Programmer/07 Monitoring, Load Balancing and Scaling/02 Load Balancing/070201 Elastic Load Balancing.md": {
+      "modifiedTime": 1712643471703,
+      "sourceSize": 6732,
+      "exportedPath": "02 Belajar AWS untuk Programmer/07 Monitoring, Load Balancing and Scaling/02 Load Balancing/070201 Elastic Load Balancing.html",
       "dependencies": []
     }
   }
